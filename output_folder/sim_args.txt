@@ -1,0 +1,1 @@
+/mnt/c/Users/Zhao/Documents/HPC/2020-2021/SPH/SPH_main.out --ic-droplet --dt 0.0001 --T 0.02 --h 0.01 | --np 2 

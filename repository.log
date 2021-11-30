@@ -1,0 +1,676 @@
+commit 616f99b1b0b5875df5b4a7e789f3f03dce59959b
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 25 04:32:35 2021 +0800
+
+    update comments
+
+M	MPI_Manager.cpp
+
+commit 62ba08ff6ffd79ec42a136274ef430818d221ab1
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 25 04:28:38 2021 +0800
+
+    added comments
+
+M	SPH.cpp
+
+commit 19653c761f9ed1de6d371af77ac221826e2671f1
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 25 04:23:15 2021 +0800
+
+    minor change to state output at final step and
+     added comments
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+M	main.cpp
+
+commit d10aecdd3f9e24b02f1580dc43e63478f9a0dc2b
+Author: zhao <weezhao@live.com>
+Date:   Wed Mar 24 09:37:43 2021 +0800
+
+    release version
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	SPH.cpp
+M	const_param.h
+
+commit 005791d94854acc27fcbdd29b6b46ae7959abafe
+Author: zhao <weezhao@live.com>
+Date:   Wed Mar 24 06:30:11 2021 +0800
+
+    commit for checkout
+
+M	.vscode/launch.json
+M	MPI_Manager.cpp
+M	SPH.cpp
+M	SPH_init.cpp
+
+commit 632e49a538abe2fa7c3cede43ba7831c24770f4a
+Author: zhao <weezhao@live.com>
+Date:   Wed Mar 24 05:43:30 2021 +0800
+
+    primary integration of MPI_Manager
+    into SPH completed.
+    First Sim Done!
+
+M	.vscode/launch.json
+M	.vscode/settings.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit 0ee832834685d64dc2d367217a5fc3c34d9d8d8d
+Author: zhao <weezhao@live.com>
+Date:   Tue Mar 23 16:19:52 2021 +0800
+
+    implemented
+    gatherv, scatterv and allgatherv
+
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+
+commit c1ff355f665bc60050c6f4a5858d6872cf7395e2
+Author: zhao <weezhao@live.com>
+Date:   Tue Mar 23 06:21:37 2021 +0800
+
+    implemented basic broadcast for n_particle, and
+    load balancing for processes,
+    added new member to interaction_set,
+    moved MPI_Init()  and Finalize() to main()
+
+M	.vscode/launch.json
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+M	main.cpp
+
+commit 6c83367865475b9fd5d6b0238973bd8fce68fb16
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 20:59:02 2021 +0800
+
+    uplifted var in density computation
+
+M	SPH.cpp
+
+commit a73162b5e3b2e76fb7acef0eb17b27f71efd98ed
+Merge: 05145a6 7073aff
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 03:51:48 2021 +0800
+
+    Merge branch 'serial'
+
+commit 7073aff3edddf2d372d7c6b30aab54cbb215c0b0
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 03:44:23 2021 +0800
+
+    release of serial
+    - branched from serial-dev
+
+commit 268abf8b36400234c65217ea6f8270fa1ddeb331
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 02:59:51 2021 +0800
+
+    change loop ordering of SPH::PerturbParticles
+    and
+    added comments for inter_set in
+    SPH::MapNeighbour
+
+M	SPH.cpp
+
+commit 6359747457e40cab7dfae2b303caaf5f782858ef
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 01:45:12 2021 +0800
+
+    correction in SPH::MapNeighbour
+
+M	.vscode/launch.json
+M	.vscode/settings.json
+M	SPH.cpp
+M	SPH.h
+
+commit 828166da619d3427c380be6488f41a194b2127f0
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 00:58:49 2021 +0800
+
+    commit before switching branch
+
+M	.vscode/launch.json
+M	SPH.cpp
+
+commit efa2f8f0b66317575087725b85b40634b016a1f8
+Author: zhao <weezhao@live.com>
+Date:   Mon Mar 22 00:26:30 2021 +0800
+
+    checkpoint for debugging
+
+M	SPH.cpp
+
+commit 08a141e7e941c405c2f46e75352b70ac055d4d40
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 23:17:56 2021 +0800
+
+    inter_set implementation on
+    SPH::DensityPressureComputation
+
+M	.vscode/settings.json
+M	SPH.cpp
+M	SPH.h
+
+commit 178c7858d4bc7d8093a38b4bddaeff20bb5e89c1
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 23:01:39 2021 +0800
+
+    SPH::MapNeighbour updated
+
+M	SPH.cpp
+M	SPH.h
+
+commit bfadb28fd3b1e35dce128d3e6102147758635047
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 20:09:57 2021 +0800
+
+    update definition of interaction_set in SPH.h
+
+M	SPH.cpp
+M	SPH.h
+
+commit a276eaa553b9ec7132b1fc0cd3032e82da60bcb7
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 06:27:03 2021 +0800
+
+    added makefile and minor changes
+
+M	.vscode/tasks.json
+A	Makefile
+M	SPH_init.cpp
+
+commit 05145a6e73c9e006511a56efb8bf02778a42ff4d
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 06:21:36 2021 +0800
+
+    update to makefile
+
+M	.vscode/tasks.json
+M	Makefile
+M	linalg.h
+
+commit 2d7fff98e43f3622f8af07be38a9b29ee7bb5e4a
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 05:57:46 2021 +0800
+
+    update .gitignore and comments in linalg.h
+
+M	.gitignore
+M	linalg.h
+
+commit 3f01710772d715ded6f3de328ad5d8849f06dd2c
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 05:36:38 2021 +0800
+
+    added Makefile
+
+M	.gitignore
+A	Makefile
+M	SPH.h
+M	SPH_init.cpp
+
+commit 5f576ae6025e83e2cd4e3dcf377f71fe00a856b5
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 03:49:16 2021 +0800
+
+    added kissing number data to const_param.h
+    added struct interaction_set definition to SPH.h
+
+M	SPH.h
+M	const_param.h
+
+commit 8c9f3a9ae53700fc2d6806d151d729f0cc567bd8
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 03:08:51 2021 +0800
+
+    update SPH::SetDroplet to fill whole circle
+
+M	.vscode/launch.json
+M	SPH_init.cpp
+
+commit c4a5f29049ea2edb8e70a2ad3d268af2798dfd13
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 01:36:31 2021 +0800
+
+    update commit with missed staged files
+
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	SPH.cpp
+M	SPH_init.cpp
+
+commit 11eca4445c4b5f6dd5e92f5f0966e6424ed88e1e
+Author: zhao <weezhao@live.com>
+Date:   Sun Mar 21 01:35:58 2021 +0800
+
+    change SPH_main to main
+    organise comments
+
+M	SPH.h
+R100	SPH_main.cpp	main.cpp
+
+commit 8d2e48463c46f0ec204eae020a5a4f6126299a9b
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 22:28:33 2021 +0800
+
+    change file name of final state output
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+
+commit c0dd28a73b7d1f18a41bcef7e4aec21db8dd0dad
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 21:57:34 2021 +0800
+
+    reintroduce .vscode to git
+
+M	.gitignore
+
+commit 39ecbd7c4c663b993169af2abc48993b5013b8f5
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 20:07:24 2021 +0800
+
+    base code release
+    - with .gitignore update
+
+M	.gitignore
+M	.vscode/launch.json
+
+commit 5c1fcaab206b0f999e6881efce868d4203b38667
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 19:59:03 2021 +0800
+
+    base code release
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	SPH.cpp
+
+commit 8a610f913d786a0c7a02e410aacb18b7e067efb0
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 16:38:44 2021 +0800
+
+    implemented
+    1)
+    overlap check between initial domain and box domain
+    SPH::SetDamBreak and SPH::SetBlockDrop
+    
+    2)
+    velocity damping at boundary
+    SPH::BoundaryCheck
+
+M	.vscode/launch.json
+M	SPH.cpp
+M	SPH_init.cpp
+
+commit 9ebdae82da47d2f9ec459900a319d08780a479fc
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 06:09:21 2021 +0800
+
+    apply boundary damping on boundary
+
+M	.vscode/launch.json
+M	SPH.cpp
+
+commit 8da2bd4e83fbf8fdfb20c41fe2a4ecfac6dbc273
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 05:33:56 2021 +0800
+
+    applied correction to pressure force and index_a
+    in SPH::AccelComputation
+
+M	.vscode/launch.json
+M	IO_Manager.h
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit 10c28c2ee72423845320554270f98a06d2fc870c
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 19 00:22:06 2021 +0800
+
+    correction on g acceleration and
+    folder output format in IO_Manager::Output_{ }
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit 2b2dd8fd4fa037c023ae2116579f26ae95fc340e
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 18 17:34:00 2021 +0800
+
+    implemented timstepping functions
+
+M	SPH.cpp
+M	SPH.h
+
+commit ca1e9d5b46b4dbb6641382d598c9991912e3b61f
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 18 14:46:40 2021 +0800
+
+    corrected energy computation in
+    SPH::EnergyComputation
+
+M	SPH.cpp
+
+commit 40c7d6a2e7ed488bf8fcc595d0af9168c9118edc
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 18 05:22:59 2021 +0800
+
+    commit left-behind changes
+
+M	.gitignore
+M	linalg.h
+
+commit ebe589b697b913f520004a1da48ec4275de574cc
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 18 05:22:29 2021 +0800
+
+    SPH::AccelComputation implementation
+
+M	.vscode/launch.json
+M	SPH.cpp
+M	SPH.h
+
+commit 392fd0041ef25699f42ade8e7096a177f9a6e174
+Author: zhao <weezhao@live.com>
+Date:   Sat Mar 13 19:06:20 2021 +0800
+
+    validated Q matrix
+
+M	.gitignore
+M	.vscode/launch.json
+M	SPH.cpp
+M	SPH.h
+M	linalg.h
+
+commit 52185789856909b4cad1ba20b2ffac3ba35a74cb
+Author: zhao <weezhao@live.com>
+Date:   Sat Mar 13 06:34:11 2021 +0800
+
+    rewrote SPH::EnergyComputation based on BLAS
+
+M	.vscode/tasks.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+M	SPH_main.cpp
+
+commit 6f103497afda3486010bb1d53e13aecc3e4f5a24
+Author: zhao <weezhao@live.com>
+Date:   Sat Mar 13 05:27:41 2021 +0800
+
+    updated computational loop in SPH::RunSimulation()
+    and
+    added linalg.h for fortran BLAS calls
+
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+A	linalg.h
+
+commit fd138fa417288dc01febb86c794d51de76b21ac8
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 12 04:59:25 2021 +0800
+
+    validated initial position
+
+M	.vscode/launch.json
+M	SPH.cpp
+M	SPH_init.cpp
+
+commit 16301955bedac014331ea14cefc1062698a5df6c
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 12 04:25:23 2021 +0800
+
+    converted boost::multi_array to
+    array
+
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit a31a10cdaf85a4992d805443697cdc0180a52cd6
+Author: zhao <weezhao@live.com>
+Date:   Fri Mar 12 02:50:37 2021 +0800
+
+    checkpoint for forcing computation
+
+M	SPH_init.cpp
+
+commit 4bfa7022a81760b348646487680ac83cd7c4c849
+Author: zhao <weezhao@live.com>
+Date:   Thu Mar 11 15:14:34 2021 +0800
+
+    changed output I/O and applied B.C check
+
+M	.vscode/settings.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit bd09a02b4ca63b0d62fa3421820d5a244b864151
+Author: zhao <weezhao@live.com>
+Date:   Sat Feb 27 16:04:44 2021 +0800
+
+    started implementation of array operators in
+    mpi_manager
+
+M	.vscode/c_cpp_properties.json
+M	.vscode/launch.json
+M	.vscode/tasks.json
+M	Assignment.pdf
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+M	SPH_main.cpp
+
+commit 283f9bf21e55163a21413d8ff543fc5e2f98de4d
+Author: zhao <weezhao@live.com>
+Date:   Fri Feb 26 18:29:42 2021 +0800
+
+    To-Do-List
+        1) code up main vector computations in MPI_Manager.cpp
+        2) apply vector computations in Start_Simulation
+        3) verify test case
+        4) parallellise
+
+commit fc2dc8d449aa12e633d104c7b5459fe8d7331b5c
+Author: zhao <weezhao@live.com>
+Date:   Fri Feb 26 18:26:47 2021 +0800
+
+    all init cond postions validated
+
+M	.vscode/launch.json
+M	SPH.h
+M	SPH_init.cpp
+
+commit 936ec7568459eed1c4fd2f6f7a4712248e58e36c
+Author: zhao <weezhao@live.com>
+Date:   Fri Feb 26 17:11:58 2021 +0800
+
+    recursion build for x array complete
+    (SPH::RecursionBuild)
+
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	SPH.h
+M	SPH_init.cpp
+
+commit d457aec7a4c124b4a9b100b906cc160fcdc408d7
+Author: zhao <weezhao@live.com>
+Date:   Fri Feb 26 01:09:18 2021 +0800
+
+    checkpoint for dam_break init rewrite
+
+M	SPH_init.cpp
+
+commit 01274c7f2c54a4e9ef1b272592887edb05dc7e6e
+Author: zhao <weezhao@live.com>
+Date:   Thu Feb 25 21:39:29 2021 +0800
+
+    state io validated.
+    need to fix init conditions in SPH_init.cpp
+
+M	.vscode/launch.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+
+commit 981f3f0c932cfb5c6f5b008d63299040c7a842bb
+Author: zhao <weezhao@live.com>
+Date:   Thu Feb 25 18:40:43 2021 +0800
+
+    SPH::RunSimulation member function solve
+    structure written.
+
+M	.vscode/c_cpp_properties.json
+M	.vscode/launch.json
+M	.vscode/tasks.json
+M	IO_Manager.cpp
+M	IO_Manager.h
+M	MPI_Manager.cpp
+M	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_init.cpp
+M	SPH_main.cpp
+M	const_param.h
+
+commit 45968733e7572cfe2940f54e8e62db844547729b
+Author: zhao <weezhao@live.com>
+Date:   Thu Feb 25 04:44:24 2021 +0800
+
+    create checkpoint and to do list:
+    1) complete IO_Manager.cpp
+    2) check initial position and distribution
+    3) code up main vector computations in MPI_Manager.cpp
+    4) apply vector computations in Start_Simulation
+    5) verify test case
+    6) parallellise
+
+M	SPH.cpp
+M	const_param.h
+
+commit 50710c9119c2423e27fd4097d44e0976abefa798
+Author: zhao <weezhao@live.com>
+Date:   Thu Feb 25 04:20:03 2021 +0800
+
+    specify main simulation algo and io_manager header file
+
+M	IO_Manager.h
+M	SPH.cpp
+M	SPH.h
+M	SPH_main.cpp
+
+commit d70219765157da6be34ab3c6ecb4bbd6d49fc457
+Author: zhao <weezhao@live.com>
+Date:   Thu Feb 25 03:32:24 2021 +0800
+
+    position init member functions completed. main code structure defined (io_manager and mpi_manager).
+
+M	.vscode/launch.json
+A	IO_Manager.cpp
+A	IO_Manager.h
+A	MPI_Manager.cpp
+A	MPI_Manager.h
+M	SPH.cpp
+M	SPH.h
+A	SPH_init.cpp
+D	SPH_sim_setup.cpp
+A	const_param.h
+
+commit 0282f59cba6ef8baa36054254df9149bd450cb49
+Author: zhao <weezhao@live.com>
+Date:   Wed Feb 24 23:12:07 2021 +0800
+
+    cmd line arg test passed
+
+M	.vscode/c_cpp_properties.json
+M	.vscode/launch.json
+M	.vscode/tasks.json
+M	SPH.cpp
+M	SPH.h
+A	SPH_main.cpp
+A	SPH_sim_setup.cpp
+D	SPH_solver
+D	SPH_solver.cpp
+
+commit 57953ce6d5bb1d13be3a865f70448f1ef0e60994
+Author: zhao <weezhao@live.com>
+Date:   Wed Feb 24 20:31:13 2021 +0800
+
+    add gitignore
+
+A	.gitignore
+A	.vscode/c_cpp_properties.json
+A	.vscode/settings.json
+A	SPH.cpp
+A	SPH.h
+
+commit 9ebc51b5b12699fcad05abcb11f58644a4d12841
+Author: zhao <weezhao@live.com>
+Date:   Wed Feb 24 18:47:15 2021 +0800
+
+    renaming
+
+D	SPH
+A	SPH_solver
+R069	SPH.cpp	SPH_solver.cpp
+
+commit b16fe30884081915236d5a1f9bb9ea52a7831787
+Author: zhao <weezhao@live.com>
+Date:   Wed Feb 24 18:27:44 2021 +0800
+
+    init repo (1st commit)
+
+A	.vscode/launch.json
+A	.vscode/tasks.json
+A	Assignment.pdf
+A	SPH
+A	SPH.cpp

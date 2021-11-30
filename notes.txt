@@ -1,0 +1,25 @@
+To-Do-List
+[x] check energy computation for Ep
+[] consider changing to std::vector
+[x] implement time-stepping, consider creating extra member function for first timestep
+[x] implement correction for dam_break (ignore boundary)
+[x] need to correct zero acceleration interaction between particles
+[x] implement velocity damping at boundary
+[x] correct SPH::PerturbParticle() loop sequence in base
+[x] merge serial with master
+[x] reorganise comments in SPH::AccelComputation for base
+[x] rewrite section about I/O in further improvements
+[] serial : change neighbour variable in SPH.h
+[] serial : change vector assignment in AccelComputation, use pointer, check first though - don't think it's an issue
+
+Optimisation Ideas
+[x] optimisation of Ek computation loop (v(x_1)' * v(x_2)) in SPH::EnergyComputation
+[x] computation of r(i,j) = -r(j,i), exploit symmetry
+[x] create particle neighbour map (for each i, map = [list of j], where q(i,j) < 1)
+
+parallel-div-dev (notes for refactoring)
+- SPH::RunSimulation()
+[x] MapNeighbour needs rewrite to deal with ghost pairs and self-symmetry
+[] a mapping from a -> a_G is required for MPI_Manager::Comm_Array_L2G, needs to be done, uses id-array
+[x] Deal with initialisation of inter_set
+[] need to communicate g_p, g_rho
